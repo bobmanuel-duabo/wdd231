@@ -1,8 +1,8 @@
 const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#primary-nav");
+const primaryNav = document.querySelector("#primary-nav");
 
 menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
+    const isOpen = primaryNav.classList.toggle("open");
 
     menuButton.setAttribute("aria-expanded", isOpen);
     menuButton.setAttribute(

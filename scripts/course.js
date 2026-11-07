@@ -4,13 +4,6 @@ const courses = [
         number: 110,
         title: "Introduction to Programming",
         credits: 2,
-        completed: false
-    },
-    {
-        subject: "WDD",
-        number: 130,
-        title: "Web Fundamentals",
-        credits: 2,
         completed: true
     },
     {
@@ -21,11 +14,11 @@ const courses = [
         completed: true
     },
     {
-        subject: "CSE",
-        number: 210,
-        title: "Programming with Classes",
+        subject: "WDD",
+        number: 130,
+        title: "Web Fundamentals",
         credits: 2,
-        completed: false
+        completed: true
     },
     {
         subject: "WDD",
@@ -40,6 +33,13 @@ const courses = [
         title: "Web Frontend Development I",
         credits: 2,
         completed: false
+    },
+    {
+        subject: "CSE",
+        number: 210,
+        title: "Programming with Classes",
+        credits: 2,
+        completed: true
     }
 ];
 
@@ -48,28 +48,26 @@ const creditTotal = document.querySelector("#credit-total");
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 function displayCourses(courseList) {
-
     courseContainer.innerHTML = courseList.map(course => `
         <article class="course ${course.completed ? "completed" : ""}">
             <h3>${course.subject} ${course.number}</h3>
             <p>${course.title}</p>
             <p>${course.credits} Credits</p>
             <p class="status">
-                ${course.completed ? "✓ Completed" : "Not Completed"}
+                ${course.completed ? "✓ Completed" : "In Progress"}
             </p>
         </article>
     `).join("");
 
     const totalCredits = courseList.reduce(
-        (total, course) => total + course.credits, 0
+        (total, course) => total + course.credits,
+        0
     );
 
-    creditTotal.textContent =
-        `Total Credits: ${totalCredits}`;
+    creditTotal.textContent = `Total Credits: ${totalCredits}`;
 }
 
 function filterCourses(subject) {
-
     const filteredCourses = subject === "ALL"
         ? courses
         : courses.filter(course => course.subject === subject);
