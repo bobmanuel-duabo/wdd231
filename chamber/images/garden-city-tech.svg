@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="20" fill="#142d4e"/>
+  <rect x="24" y="23" width="72" height="49" rx="5"
+        fill="none" stroke="#f4c95d" stroke-width="5"/>
+  <path d="M60 73v13M43 87h34"
+        stroke="#f4c95d" stroke-width="5" stroke-linecap="round"/>
+  <text x="60" y="56" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="23"
+        font-weight="bold" fill="#ffffff">GC</text>
+</svg>

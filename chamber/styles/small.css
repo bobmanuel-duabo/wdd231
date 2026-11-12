@@ -1,0 +1,277 @@
+:root {
+    --navy: #142d4e;
+    --green: #176047;
+    --gold: #f4c95d;
+    --background: #f3f6f8;
+    --white: #ffffff;
+    --text: #203247;
+    --border: #c8d2dc;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: var(--background);
+    color: var(--text);
+}
+
+a {
+    color: var(--green);
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 3px solid #b45309;
+    outline-offset: 4px;
+}
+
+header,
+footer {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.header-content,
+.footer-content,
+main {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 0;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 1.1rem;
+}
+
+.brand-subtitle {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+#menu-button {
+    min-width: 44px;
+    min-height: 44px;
+    border: 1px solid var(--white);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+#primary-nav {
+    display: none;
+    width: 100%;
+}
+
+#primary-nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+#primary-nav a {
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#primary-nav a:hover {
+    background: #29496e;
+}
+
+#primary-nav a[aria-current="page"] {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+}
+
+main {
+    padding-block: 2rem;
+}
+
+.page-intro {
+    max-width: 700px;
+}
+
+.eyebrow {
+    margin-bottom: 0.25rem;
+    color: var(--green);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0 0 0.75rem;
+    color: var(--navy);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+}
+
+.view-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-block: 1.5rem;
+}
+
+.view-controls button {
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    border: 2px solid var(--green);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--green);
+    font-weight: 700;
+}
+
+.view-controls button[aria-pressed="true"] {
+    background: var(--green);
+    color: var(--white);
+}
+
+#status {
+    text-align: center;
+}
+
+#status:empty {
+    display: none;
+}
+
+#members {
+    display: grid;
+    gap: 1rem;
+}
+
+#members.grid {
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.member-card {
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    overflow-wrap: anywhere;
+}
+
+.grid .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 3px 10px rgb(20 45 78 / 8%);
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.member-card h2 {
+    margin: 0 0 0.5rem;
+    color: var(--navy);
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.member-card p {
+    margin: 0.35rem 0;
+}
+
+.member-card a {
+    display: inline-block;
+    padding-block: 0.5rem;
+}
+
+.membership {
+    display: inline-block;
+    align-self: center;
+    margin-top: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 20px;
+    background: #e6f0ea;
+    color: #164d38;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* List view always uses one column and hides images. */
+#members.list {
+    grid-template-columns: 1fr;
+}
+
+.list .member-card {
+    border-radius: 4px;
+}
+
+.list .member-card:nth-child(even) {
+    background: #e8eef4;
+}
+
+.list .member-card img {
+    display: none;
+}
+
+.footer-content {
+    display: grid;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    overflow-wrap: anywhere;
+}
+
+footer p {
+    margin: 0.35rem 0;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer :focus-visible,
+header :focus-visible {
+    outline-color: var(--gold);
+}

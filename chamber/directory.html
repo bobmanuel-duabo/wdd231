@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the Port Harcourt Chamber of Commerce member directory and connect with local businesses in Rivers State, Nigeria.">
+    <meta name="author" content="Duabo Bobmanuel">
+
+    <meta property="og:title" content="Business Directory | Port Harcourt Chamber of Commerce">
+    <meta property="og:description"
+        content="Discover businesses in Port Harcourt. Explore our member directory and connect with the local business community.">
+    <meta property="og:image" content="https://bobmanuel-duabo.github.io/wdd231/chamber/images/social-preview.jpg">
+    <meta property="og:url" content="https://bobmanuel-duabo.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <title>Business Directory | Port Harcourt Chamber of Commerce</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">PH</span>
+                <span>
+                    Port Harcourt
+                    <span class="brand-subtitle">Chamber of Commerce</span>
+                </span>
+            </a>
+
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                ☰
+            </button>
+
+            <nav id="primary-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="directory.html" aria-current="page">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-intro">
+            <p class="eyebrow">Connect with our business community</p>
+            <h1>Business Directory</h1>
+            <p>
+                Explore our members and discover businesses serving
+                Port Harcourt and Rivers State.
+            </p>
+        </div>
+
+        <div class="view-controls" role="group" aria-label="Choose directory layout">
+            <button id="grid-button" type="button" aria-pressed="true">
+                Grid View
+            </button>
+            <button id="list-button" type="button" aria-pressed="false">
+                List View
+            </button>
+        </div>
+
+        <p id="status" role="status">Loading member information...</p>
+
+        <div id="members" class="grid"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <p><strong>Port Harcourt Chamber of Commerce</strong></p>
+                <p>Port Harcourt, Rivers State, Nigeria</p>
+                <p>
+                    <a href="mailto:info@phchamber.example">
+                        info@phchamber.example
+                    </a>
+                </p>
+                <p>Student project — sample chamber contact information.</p>
+            </div>
+
+            <div>
+                <p>WDD 231 Class Project</p>
+                <p>Duabo Bobmanuel</p>
+                <p>
+                    &copy; <span id="currentyear"></span>
+                    Port Harcourt Chamber of Commerce
+                </p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+@media screen and (min-width: 48rem) {
+    .brand {
+        font-size: 1.25rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.85rem;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    #primary-nav,
+    #primary-nav.open {
+        display: flex;
+        flex-direction: row;
+        gap: 0.25rem;
+        width: auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .list .member-card {
+        display: grid;
+        grid-template-columns: 1.3fr 1.5fr 1fr;
+        align-items: center;
+        gap: 0.75rem 1.5rem;
+    }
+
+    .list .member-card h2 {
+        margin: 0;
+    }
+
+    .list .member-card .membership {
+        justify-self: start;
+    }
+}
