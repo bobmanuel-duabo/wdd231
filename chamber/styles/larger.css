@@ -39,3 +39,23 @@
         justify-self: start;
     }
 }
+
+/* Homepage layout on wider screens */
+
+@media screen and (min-width: 48rem) {
+    .hero>img {
+        height: 480px;
+    }
+
+    .hero-content {
+        inset: auto auto 2rem 2rem;
+        width: min(550px, calc(100% - 4rem));
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .home-info {
+        grid-template-columns: 2fr 1fr 1fr;
+        align-items: start;
+    }
+}

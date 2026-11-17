@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Connect with Port Harcourt businesses, explore chamber events, and discover opportunities for business growth in Rivers State, Nigeria.">
+    <meta name="author" content="Duabo Bobmanuel">
+
+    <meta property="og:title" content="Port Harcourt Chamber of Commerce">
+    <meta property="og:description"
+        content="Build connections and grow your business. Discover chamber members, events, and opportunities in Port Harcourt.">
+    <meta property="og:image" content="https://bobmanuel-duabo.github.io/wdd231/chamber/images/social-preview.jpg">
+    <meta property="og:url" content="https://bobmanuel-duabo.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <title>Port Harcourt Chamber of Commerce</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">PH</span>
+                <span>
+                    Port Harcourt
+                    <span class="brand-subtitle">Chamber of Commerce</span>
+                </span>
+            </a>
+
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                ☰
+            </button>
+
+            <nav id="primary-nav" aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Port Harcourt Chamber of Commerce</h1>
+
+        <section class="hero" aria-label="Business community">
+            <img src="images/port-harcourt-hero.webp" alt="Port Harcourt business district" width="1200" height="600"
+                fetchpriority="high">
+
+            <div class="hero-content">
+                <h2>Connect. Collaborate. Grow.</h2>
+                <p>
+                    Build stronger business connections
+                    in the Garden City.
+                </p>
+                <a class="cta-button" href="join.html">
+                    Join the Chamber
+                </a>
+            </div>
+        </section>
+
+        <div class="home-info">
+            <section class="home-panel">
+                <h2>Upcoming Events</h2>
+                <p>Sample events for this student chamber project.</p>
+
+                <article>
+                    <h3>Business Networking Breakfast</h3>
+                    <p>Meet local entrepreneurs and exchange ideas.</p>
+                    <p>First Friday of each month, 9:00 a.m.</p>
+                    <p>Port Harcourt — venue to be announced.</p>
+                </article>
+
+                <article>
+                    <h3>Digital Skills Workshop</h3>
+                    <p>
+                        Explore practical ways to promote
+                        your business online.
+                    </p>
+                    <p>Third Saturday of each month, 10:00 a.m.</p>
+                    <p>Online — registration details coming soon.</p>
+                </article>
+            </section>
+
+            <section class="home-panel">
+                <h2>Current Weather</h2>
+                <p>Port Harcourt, Nigeria</p>
+                <div id="current-weather"></div>
+                <p id="weather-status" role="status">
+                    Loading weather information...
+                </p>
+            </section>
+
+            <section class="home-panel">
+                <h2>Three-Day Forecast</h2>
+                <p>Forecast temperatures for the next three days.</p>
+                <div id="forecast"></div>
+            </section>
+        </div>
+
+        <section class="spotlights-section">
+            <h2>Member Spotlights</h2>
+            <p>Meet some of our Silver and Gold members.</p>
+            <p id="spotlight-status" role="status">
+                Loading member spotlights...
+            </p>
+            <div id="spotlights" class="spotlight-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <p>
+                    <strong>
+                        Port Harcourt Chamber of Commerce
+                    </strong>
+                </p>
+                <p>Port Harcourt, Rivers State, Nigeria</p>
+                <p>
+                    <a href="mailto:info@phchamber.example">
+                        info@phchamber.example
+                    </a>
+                </p>
+                <p>
+                    Student project — sample chamber
+                    contact information.
+                </p>
+            </div>
+
+            <div>
+                <p>WDD 231 Class Project</p>
+                <p>Duabo Bobmanuel</p>
+                <p>
+                    &copy; <span id="currentyear"></span>
+                    Port Harcourt Chamber of Commerce
+                </p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

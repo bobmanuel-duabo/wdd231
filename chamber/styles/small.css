@@ -275,3 +275,140 @@ footer :focus-visible,
 header :focus-visible {
     outline-color: var(--gold);
 }
+
+/* Chamber homepage */
+
+.hero {
+    position: relative;
+    margin-block: 1.5rem 2rem;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--navy);
+}
+
+.hero>img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 1.25rem;
+    background: rgb(20 45 78 / 95%);
+    color: var(--white);
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin-block: 0.75rem 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    text-decoration: underline;
+}
+
+.cta-button:focus-visible {
+    outline-color: var(--white);
+}
+
+.home-info {
+    display: grid;
+    gap: 1rem;
+}
+
+.home-panel {
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    overflow-wrap: anywhere;
+}
+
+.home-panel h2 {
+    margin-top: 0;
+    color: var(--navy);
+    font-size: 1.4rem;
+}
+
+.home-panel article+article {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.home-panel h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.home-panel p {
+    margin-block: 0.5rem;
+}
+
+#weather-status:empty,
+#spotlight-status:empty {
+    display: none;
+}
+
+.weather-temperature {
+    margin-block: 0.5rem;
+    color: var(--navy);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.weather-description {
+    text-transform: capitalize;
+}
+
+.forecast-day {
+    padding-block: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.forecast-day:last-child {
+    border-bottom: 0;
+}
+
+.spotlights-section {
+    margin-top: 2rem;
+}
+
+.spotlights-section>h2 {
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.spotlight-grid .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
